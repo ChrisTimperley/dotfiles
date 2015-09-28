@@ -8,6 +8,11 @@ set expandtab
 " http://vim.wikia.com/wiki/Display_line_numbers
 set number
 
+" Allow pasting to multiple locations.
+" 'p' to paste, 'gv' to re-select text original intended for copying, 'y'
+" to copy again.
+xnoremap p pgvy
+
 " Highlight text that exceeds the 80 column limit.
 highlight OverLength ctermbg=darkred ctermfg=white
 match OverLength /\%81v.\+/
