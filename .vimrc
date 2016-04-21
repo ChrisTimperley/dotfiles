@@ -17,6 +17,12 @@ xnoremap p pgvy
 highlight OverLength ctermbg=darkred ctermfg=white
 match OverLength /\%81v.\+/
 
+" Colours!
+syntax enable
+set hlsearch
+set background=dark
+colorscheme solarized
+
 " Vundle.vim
 set nocompatible
 filetype off
