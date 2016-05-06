@@ -17,6 +17,9 @@ xnoremap p pgvy
 highlight OverLength ctermbg=darkred ctermfg=white
 match OverLength /\%81v.\+/
 
+" netrw
+let g:netrw_liststyle=3
+
 " Colours!
 syntax enable
 set hlsearch
