@@ -3,9 +3,6 @@ set tabstop=2
 set shiftwidth=2
 set smarttab
 set expandtab
-
-" Line numbering settings.
-" http://vim.wikia.com/wiki/Display_line_numbers
 set number
 
 " Allow pasting to multiple locations.
@@ -27,7 +24,11 @@ set background=dark
 colorscheme solarized
 set t_Co=16
 
-" Vundle.vim
+" airline
+set laststatus=2
+set ttimeoutlen=50
+
+" Vundle
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -40,6 +41,8 @@ Plugin 'morhetz/gruvbox'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on
