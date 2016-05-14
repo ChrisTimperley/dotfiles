@@ -17,3 +17,4 @@ link tmux.conf
 link vimrc
 link dir_colors
 link minttyrc
+link bash_aliases
