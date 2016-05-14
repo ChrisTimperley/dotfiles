@@ -14,7 +14,14 @@ function link {
 # Create symbolic links to dot files
 link gitconfig
 link tmux.conf
-link vimrc
 link dir_colors
 link minttyrc
 link bash_aliases
+
+# Vim
+link vimrc
+mkdir -p ~/.vim/bundle
+if [ ! -d ~/.vim/bundle/Vundle.vim ]; then 
+  git clone -q https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
+vim +PluginInstall +qall
