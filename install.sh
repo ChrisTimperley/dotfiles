@@ -16,3 +16,4 @@ link gitconfig
 link tmux.conf
 link vimrc
 link dir_colors
+link minttyrc
