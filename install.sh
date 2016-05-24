@@ -11,6 +11,10 @@ function link {
   fi
 }
 
+# Download the git submodules
+git submodule init
+git submodule update
+
 # Create symbolic links to dot files
 link gitconfig
 link tmux.conf
