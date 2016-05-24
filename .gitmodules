@@ -1,0 +1,7 @@
+[submodule "solarized/gnome-terminal"]
+  path = solarized/gnome-terminal
+  url = git://github.com/Anthony25/gnome-terminal-colors-solarized
+
+[submodule "fonts/powerline"]
+  path = fonts/powerline
+  url = git://github.com/powerline/fonts
