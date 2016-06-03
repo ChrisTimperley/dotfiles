@@ -22,6 +22,12 @@ link dir_colors
 link minttyrc
 link bash_aliases
 
+# Install OS specifics
+#if [ uname -o == "Cygwin" ];
+# $here/install-cygwin.sh 
+#fi
+
+
 # Vim
 link vimrc
 mkdir -p ~/.vim/bundle
