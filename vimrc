@@ -17,10 +17,14 @@ match OverLength /\%81v.\+/
 " netrw
 let g:netrw_liststyle=3
 
+" Kill the bells on Cygwin
+set vb
+set t_vb=
+
 " Colours!
 syntax enable
 set hlsearch
-set background=dark
+set background=light
 colorscheme solarized
 set t_Co=16
 
