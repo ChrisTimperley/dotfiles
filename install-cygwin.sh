@@ -11,6 +11,11 @@ else
   echo "skipping apt-cyg (already installed)"
 fi
 
+# install pip
+if (which pip); then
+  lynx -source https://bootstrap.pypa.io/get-pip.py | python
+fi
+
 # fix the stupid bells in Mintty
 if (! grep -q "^set bell-style none$" ~/.inputrc); then
   echo "fixing mintty bells"
