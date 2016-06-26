@@ -47,6 +47,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'lervag/vimtex'
 
 call vundle#end()
 filetype plugin indent on

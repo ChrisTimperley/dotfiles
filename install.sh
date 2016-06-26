@@ -21,6 +21,7 @@ link tmux.conf
 link dir_colors
 link minttyrc
 link bash_aliases
+link screenrc
 
 # Install OS specifics
 #if [ uname -o == "Cygwin" ];
