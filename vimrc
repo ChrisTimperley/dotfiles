@@ -24,7 +24,7 @@ set t_vb=
 " Colours!
 syntax enable
 set hlsearch
-set background=light
+set background=dark
 colorscheme solarized
 set t_Co=16
 
@@ -48,6 +48,7 @@ Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'lervag/vimtex'
+Plugin 'tpop/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
