@@ -6,3 +6,5 @@ Line Navigation
 * L   - last line on screen (Low)
 * M   - middle line of screen (Middle)
 * H   - top line of screen (High)
+* j   - down one line
+* k   - up one line
