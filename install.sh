@@ -23,6 +23,9 @@ link minttyrc
 link bash_aliases
 link screenrc
 
+# Add pirate-get config
+test -f ~/.config/pirate-get || ln -s  $here/config/pirate-get ~/.config/pirate-get
+
 # Install OS specifics
 #if [ uname -o == "Cygwin" ];
 # $here/install-cygwin.sh 
