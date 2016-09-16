@@ -50,10 +50,10 @@ Plugin 'morhetz/gruvbox'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'lervag/vimtex'
-Plugin 'tpop/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
