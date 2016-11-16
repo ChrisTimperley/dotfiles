@@ -1,9 +1,17 @@
-filetype plugin indent on
+filetype plugin on
+filetype indent on
 set tabstop=2
 set shiftwidth=2
 set smarttab
 set expandtab
 set number
+set shellslash
+
+set pastetoggle=<F2>
+
+" http://vim-latex.sourceforge.net/documentation/latex-suite.html#recommended-settings
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
 
 " Allow pasting to multiple locations.
 " 'p' to paste, 'gv' to re-select text original intended for copying, 'y'

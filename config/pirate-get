@@ -29,4 +29,5 @@ colors = true
 
 ; the pirate bay mirror(s) to use:
 ; one or more space separated URLs
-mirror = https://pirateproxy.red
+;mirror = https://pirateproxy.red
+mirror = https://ahoy.one
