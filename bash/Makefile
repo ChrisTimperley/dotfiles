@@ -1,15 +1,15 @@
 all: bash_aliases bash_functions bashrc
 
 bash_aliases:
-	@ source "${PWD}/bash_functions" && \
-		dotfilelink "${PWD}/bash_aliases" "${HOME}/.bash_aliases"
+	@ source "${CURDIR}/bash_functions" && \
+		dotfilelink "${CURDIR}/bash_aliases" "${CURDIR}/.bash_aliases"
 
 bash_functions:
-	@ source "${PWD}/bash_functions" && \
-		dotfilelink "${PWD}/bash_functions" "${HOME}/.bash_functions"
+	@ source "${CURDIR}/bash_functions" && \
+		dotfilelink "${CURDIR}/bash_functions" "${HOME}/.bash_functions"
 
 bashrc: bash_aliases bash_functions
-	@ source "${PWD}/bash_functions" && \
-		dotfilelink "${PWD}/bashrc" "${HOME}/.bashrc"
+	@ source "${CURDIR}/bash_functions" && \
+		dotfilelink "${CURDIR}/bashrc" "${HOME}/.bashrc"
 
 .PHONY: bash_aliases bash_functions bashrc
