@@ -1,4 +1,4 @@
-all: i3 bash tmux git
+all: i3 bash tmux git xorg
 
 bash:
 	${MAKE} -C bash
@@ -10,7 +10,10 @@ git: bash
 tmux: bash
 	${MAKE} -C tmux
 
-i3: bash
+xorg: bash
+	${MAKE} -C xorg
+
+i3: bash xorg
 	${MAKE} -C i3
 
-.PHONY: bash i3 git tmux
+.PHONY: bash i3 git tmux xorg
