@@ -2,6 +2,6 @@ all: tmux.conf
 
 tmux.conf:
 	@ source "${HOME}/.bashrc" && \
-		dotfilelink "${CURDIR}/tmux.conf" "${CURDIR}/.tmux.conf"
+		dotfilelink "${CURDIR}/tmux.conf" "${HOME}/.tmux.conf"
 
 .PHONY: tmux.conf
