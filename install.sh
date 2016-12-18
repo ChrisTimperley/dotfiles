@@ -1,34 +1,16 @@
 #!/bin/bash
 here=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
-function link {
-  file=$1
-  if (test -f ~/.$file); then
-    echo "Skipping symbolic link: $file (file already exists)"
-  else 
-    echo "Creating symbolic link from ~/.$file to $here/$file"
-    ln -s $here/$file ~/.$file
-  fi
-}
-
 # Download the git submodules
 git submodule init
 git submodule update
 
 # Create symbolic links to dot files
-link tmux.conf
 link minttyrc
-link bash_aliases
 link screenrc
 
 # Add pirate-get config
 test -f ~/.config/pirate-get || ln -s  $here/config/pirate-get ~/.config/pirate-get
-
-# Install OS specifics
-#if [ uname -o == "Cygwin" ];
-# $here/install-cygwin.sh 
-#fi
-
 
 # Vim
 link vimrc

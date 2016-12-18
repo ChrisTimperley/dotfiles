@@ -2,7 +2,7 @@ all: bash_aliases bash_functions bashrc
 
 bash_aliases:
 	@ source "${CURDIR}/bash_functions" && \
-		dotfilelink "${CURDIR}/bash_aliases" "${CURDIR}/.bash_aliases"
+		dotfilelink "${CURDIR}/bash_aliases" "${HOME}/.bash_aliases"
 
 bash_functions:
 	@ source "${CURDIR}/bash_functions" && \
