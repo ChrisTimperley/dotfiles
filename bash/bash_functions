@@ -1,0 +1,15 @@
+#!/bin/bash
+is_ubuntu(){
+  lsb_release -a |& grep -q "Ubuntu"
+}
+
+dotfilelink(){
+  to=$1
+  from=$2
+  if (test -f "${from}"); then
+    echo "[dotfilelink] skipping: ${from} -> ${to} (already exists)"
+  else 
+    echo "[dotfilelink] linking: ${from} -> ${to}"
+    ln -s "${to}" "${from}"
+  fi
+}

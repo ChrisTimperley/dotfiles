@@ -1,8 +1,15 @@
-all: bash_aliases
+all: bash_aliases bash_functions bashrc
 
 bash_aliases:
-	@ (test -f ${HOME}/.bash_aliases && echo "skipping: bash_aliases (already exists)") \
-		|| (ln -s ${PWD}/bash_aliases ${HOME}/.bash_aliases && echo "linked: bash_aliases") \
-		|| true
+	@ source "${PWD}/bash_functions" && \
+		dotfilelink "${PWD}/bash_aliases" "${HOME}/.bash_aliases"
 
-.PHONY: bash_aliases
+bash_functions:
+	@ source "${PWD}/bash_functions" && \
+		dotfilelink "${PWD}/bash_functions" "${HOME}/.bash_functions"
+
+bashrc: bash_aliases bash_functions
+	@ source "${PWD}/bash_functions" && \
+		dotfilelink "${PWD}/bashrc" "${HOME}/.bashrc"
+
+.PHONY: bash_aliases bash_functions bashrc
