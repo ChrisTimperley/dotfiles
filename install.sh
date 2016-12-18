@@ -16,9 +16,7 @@ git submodule init
 git submodule update
 
 # Create symbolic links to dot files
-link gitconfig
 link tmux.conf
-link dir_colors
 link minttyrc
 link bash_aliases
 link screenrc
