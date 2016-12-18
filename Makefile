@@ -1,9 +1,12 @@
 all: i3 git
 
-git:
+bash:
+	make -C bash
+
+git: bash
 	make -C git
 
-i3:
+i3: bash
 	make -C i3
 
-.PHONY: i3 git
+.PHONY: bash i3 git
