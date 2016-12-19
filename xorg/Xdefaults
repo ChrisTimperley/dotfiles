@@ -2,32 +2,22 @@
 ! Xft settings
 !-------------------------------------------------------------------------------
 
-Xft.rgba:                   rgb
-Xft.hinting:                true
-Xft.hintstyle:              hintslight
+Xft.rgba:                     rgb
+Xft.hinting:                  true
+Xft.hintstyle:                hintslight
 
-!-------------------------------------------------------------------------------
-! URxvt settings
-! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
-! More info at:
-! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
-!-------------------------------------------------------------------------------
-
-! Copy and paste
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
-URxvt.perl-ext-common: default,clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
 
-URxvt.depth:                32
-URxvt.geometry:             90x30
-URxvt.transparent:          false
-URxvt.fading:               0
-! URxvt.urgentOnBell:         true
-! URxvt.visualBell:           true
-URxvt.loginShell:           true
-URxvt.saveLines:            50
-URxvt.internalBorder:       3
-URxvt.lineSpace:            0
+URxvt.depth:                  32
+URxvt.geometry:               90x30
+URxvt.transparent:            false
+URxvt.fading:                 0
+URxvt.loginShell:             true
+URxvt.saveLines:              50
+URxvt.internalBorder:         3
+URxvt.lineSpace:              0
 
 ! Fonts
 URxvt.allow_bold:           false
@@ -43,9 +33,8 @@ URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
 ! Perl extensions
-URxvt.perl-ext-common:      default,matcher
-URxvt.matcher.button:       1
-URxvt.urlLauncher:          firefox
+! URxvt.matcher.button:       1
+! URxvt.urlLauncher:          firefox
 
 ! Cursor
 URxvt.cursorBlink:          true
