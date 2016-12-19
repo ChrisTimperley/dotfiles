@@ -7,7 +7,6 @@ git submodule update
 
 # Create symbolic links to dot files
 link minttyrc
-link screenrc
 
 # Add pirate-get config
 test -f ~/.config/pirate-get || ln -s  $here/config/pirate-get ~/.config/pirate-get
