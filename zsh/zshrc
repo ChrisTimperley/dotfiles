@@ -1,0 +1,5 @@
+# Aliases
+# TODO: split into separate file, share with bash?
+alias ls='ls --color=auto'
+
+# SSH agent

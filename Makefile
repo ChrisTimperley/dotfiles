@@ -1,8 +1,10 @@
-all: i3 bash tmux git xorg
+all: i3 bash tmux git xorg zsh
 
 bash:
 	${MAKE} -C bash
-	source "${HOME}/.bashrc"
+
+zsh:
+	${MAKE} -C zsh
 
 git: bash
 	${MAKE} -C git
@@ -16,4 +18,4 @@ xorg: bash
 i3: bash xorg
 	${MAKE} -C i3
 
-.PHONY: bash i3 git tmux xorg
+.PHONY: bash zsh i3 git tmux xorg zsh
