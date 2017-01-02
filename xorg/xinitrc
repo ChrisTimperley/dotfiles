@@ -6,4 +6,6 @@ start-pulseaudio-x11
 # fix the typematic delay (and frequency)
 xset r rate 200 35
 
+autocutsel &
+
 exec i3
