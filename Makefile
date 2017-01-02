@@ -1,4 +1,7 @@
-all: i3 bash tmux git xorg zsh
+all: i3 bash tmux git xorg zsh fonts
+
+fonts:
+	${MAKE} -C fonts
 
 bash:
 	${MAKE} -C bash
@@ -18,4 +21,4 @@ xorg: bash
 i3: bash xorg
 	${MAKE} -C i3
 
-.PHONY: bash zsh i3 git tmux xorg zsh
+.PHONY: bash zsh i3 git tmux xorg zsh fonts
