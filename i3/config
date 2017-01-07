@@ -11,6 +11,8 @@
 
 
 # Workspace Icons
+set $WS3 "Email"
+set $WS4 "Spotify"
 set $WS5 "Steam"
 
 set $mod Mod4
@@ -20,7 +22,7 @@ set $mod Mod4
 font pango:monospace 8
 
 # Remove the titlebar
-for_window [class="Chromium|Firefox"] border pixel 1
+for_window [class="Chromium|Firefox|Chrome|Spotify"] border pixel 1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -157,6 +159,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Workspace assignments
+for_window [class="Spotify"] move to workspace $WS4
 assign [class="Steam"] $WS5
 
 # Rotate through workspaces
