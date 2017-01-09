@@ -1,5 +1,20 @@
+export EDITOR='vim'
+
+# =============================================================================
 # Aliases
+# =============================================================================
+
+# Allow aliases to be sudo-ed
+alias sudo='sudo '
+
 # TODO: split into separate file, share with bash?
 alias ls='ls --color=auto'
 
-# SSH agent
+# Gem
+export PATH="$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin"
+
+# Credit to: jessfraz
+docker-clean(){
+  docker rm -v $(docker ps --filter status=exited -q 2> /dev/null) 2> /dev/null
+  docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2> /dev/null
+}
