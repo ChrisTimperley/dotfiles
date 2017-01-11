@@ -5,9 +5,6 @@ here=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 git submodule init
 git submodule update
 
-# Create symbolic links to dot files
-link minttyrc
-
 # Add pirate-get config
 test -f ~/.config/pirate-get || ln -s  $here/config/pirate-get ~/.config/pirate-get
 
