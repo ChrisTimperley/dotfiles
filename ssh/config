@@ -1,1 +1,6 @@
+# Allow automatic connection sharing
+ControlMaster auto
+ControlPath ~/.ssh/control:%h:%p;%r
+
+# Include secret files
 include config.d/*
