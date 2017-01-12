@@ -2,5 +2,9 @@
 ControlMaster auto
 ControlPath ~/.ssh/control:%h:%p;%r
 
+# Maintain SSH keys (requires openssh 7.2+)
+# http://unix.stackexchange.com/questions/180080/how-to-get-asked-for-ssh-key-passphrase-once-and-only-when-needed
+AddKeysToAgent yes
+
 # Include secret files
 include config.d/*
