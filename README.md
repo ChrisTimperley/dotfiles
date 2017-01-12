@@ -1,9 +1,9 @@
-# dotfiles
+# ChrisTimperley's dotfiles
 
 ## Installation & Usage
 
 ```
-cd
+cd ~
 git clone https://github.com/ChrisTimperley/dotfiles .dotfiles
-.dotfiles/install.sh
+make
 ```
