@@ -1,5 +1,6 @@
 filetype plugin on
 filetype indent on
+
 set tabstop=2
 set shiftwidth=2
 set smarttab
@@ -19,6 +20,7 @@ let g:tex_flavor='latex'
 xnoremap p pgvy
 
 " Highlight text that exceeds the 80 column limit.
+" TODO: Doesn't work anymore
 highlight OverLength ctermbg=darkred ctermfg=white
 match OverLength /\%81v.\+/
 
@@ -38,12 +40,13 @@ set t_Co=256
 
 " airline
 set laststatus=2
+set encoding=utf-8
 set ttimeoutlen=50
 let g:airline_powerline_fonts=1
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
+"if !exists('g:airline_symbols')
+"  let g:airline_symbols = {}
+"endif
+"let g:airline_symbols.space = "\ua0"
 
 " Vundle
 set nocompatible
@@ -60,8 +63,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'lervag/vimtex'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'lervag/vimtex'
 
 call vundle#end()
 filetype plugin indent on
