@@ -10,6 +10,12 @@ docker-clean(){
   docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2> /dev/null
 }
 
+# Wipes all containers and images from the host
+docker-nuke(){
+  docker rmi -f $(docker images -aq 2> /dev/null)
+  docker rm -f $(docker ps -aq 2> /dev/null)
+}
+
 # Installs a dotfile by creating a symbolic link (if the file hasn't already
 # been installed)
 dotfilelink(){
@@ -24,5 +30,6 @@ dotfilelink(){
 }
 
 gtfo(){
-  rm -rf /tmp/*
+  docker-nuke &> /dev/null
+  rm -rf /tmp/* &> /dev/null
 }
