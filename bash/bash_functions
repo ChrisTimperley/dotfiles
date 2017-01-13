@@ -22,3 +22,7 @@ dotfilelink(){
     ln -s "${to}" "${from}"
   fi
 }
+
+gtfo(){
+  rm -rf /tmp/*
+}
