@@ -29,6 +29,11 @@ dotfilelink(){
   fi
 }
 
+# Give ownership of a directory to a given user
+repossess(){
+  sudo chown -R $(whoami) "$1"
+}
+
 gtfo(){
   docker-nuke &> /dev/null
   rm -rf /tmp/* &> /dev/null
