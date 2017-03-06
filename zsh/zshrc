@@ -13,5 +13,8 @@ source ~/.bash_aliases
 # TODO: split into separate file, share with bash?
 alias ls='ls --color=auto'
 
+# Add /usr/bin to PATH
+export PATH="$PATH:/usr/bin"
+
 # Gem
 export PATH="$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin"
