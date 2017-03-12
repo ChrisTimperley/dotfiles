@@ -1,0 +1,28 @@
+# Destroys dangling Docker images and exited containers
+# Credit to: jessfraz
+docker_clean(){
+  docker rm -v $(docker ps --filter status=exited -q 2> /dev/null) 2> /dev/null
+  docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2> /dev/null
+}
+
+# Wipes all containers and images from the host
+docker_nuke(){
+  docker rmi -f $(docker images -aq 2> /dev/null)
+  docker rm -f $(docker ps -aq 2> /dev/null)
+}
+
+pdflatex(){
+  docker run  --rm -i --user="$(id -u):$(id -g)" \
+              --net=none \
+              -v "$PWD":/data \
+              blang/latex \
+              pdflatex "$@"
+}
+
+bibtex(){
+  docker run  --rm -i --user="$(id -u):$(id -g)" \
+              --net=none \
+              -v "$PWD":/data \
+              blang/latex \
+              bibtex "$@"
+}

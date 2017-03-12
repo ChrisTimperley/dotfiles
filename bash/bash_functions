@@ -3,24 +3,6 @@ is_ubuntu(){
   lsb_release -a |& grep -q "Ubuntu"
 }
 
-# Destroys dangling Docker images and exited containers
-# Credit to: jessfraz
-docker_clean(){
-  docker rm -v $(docker ps --filter status=exited -q 2> /dev/null) 2> /dev/null
-  docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2> /dev/null
-}
-
-# Wipes all containers and images from the host
-docker_nuke(){
-  docker rmi -f $(docker images -aq 2> /dev/null)
-  docker rm -f $(docker ps -aq 2> /dev/null)
-}
-
-# runs blang/latex docker container
-docker_latex(){
-  docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data blang/latex "$@"
-}
-
 # Installs a dotfile by creating a symbolic link (if the file hasn't already
 # been installed)
 dotfilelink(){
@@ -42,14 +24,4 @@ repossess(){
 gtfo(){
   docker-nuke &> /dev/null
   rm -rf /tmp/* &> /dev/null
-}
-
-### Pseudobinaries (provided by Docker)
-# - maybe it's best to link these in /usr/bin?
-pdflatex(){
-  docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data blang/latex pdflatex "$@"
-}
-
-bibtex(){
-  docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data blang/latex bibtex "$@"
 }
