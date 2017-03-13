@@ -26,3 +26,10 @@ bibtex(){
               blang/latex \
               bibtex "$@"
 }
+
+pdftk(){
+  docker run  --rm
+              --net=none \
+              -v "$PWD":/work
+              christimperley/pdftk "$@"
+}
