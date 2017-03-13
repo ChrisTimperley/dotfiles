@@ -30,9 +30,9 @@ bibtex(){
 }
 
 pdftk(){
-  docker run  --rm
+  docker run  --rm \
               --log-driver none \
               --net=none \
-              -v "$PWD":/work
+              -v "$PWD":/data \
               christimperley/pdftk "$@"
 }
