@@ -12,3 +12,5 @@ fi
 
 # Allow aliases to be sudo-ed
 alias sudo='sudo '
+
+alias cdls='cd $1 && ls'
