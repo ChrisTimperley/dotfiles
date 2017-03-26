@@ -19,3 +19,6 @@ export PATH="$PATH:/usr/bin"
 
 # Gem
 export PATH="$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin"
+
+# dynamic-colors
+export PATH="${HOME}/.dynamic-colors/bin:${PATH}"

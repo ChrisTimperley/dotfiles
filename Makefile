@@ -1,4 +1,4 @@
-all: i3 bash tmux git xorg zsh fonts ssh
+all: i3 bash tmux git xorg zsh fonts ssh dyn-colours
 
 fonts:
 	${MAKE} -C fonts
@@ -24,4 +24,9 @@ ssh: bash
 i3: bash xorg
 	${MAKE} -C i3
 
-.PHONY: bash zsh i3 git tmux xorg zsh fonts ssh
+dyn-colours:
+	@ if [ ! -d "${HOME}/.dynamic-colors" ]; then \
+			git clone https://github.com/sos4nt/dynamic-colors ~/.dynamic-colors; \
+		fi
+
+.PHONY: bash zsh i3 git tmux xorg zsh fonts ssh dyn-colours
