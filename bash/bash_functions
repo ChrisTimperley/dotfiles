@@ -25,3 +25,8 @@ gtfo(){
   docker-nuke &> /dev/null
   rm -rf /tmp/* &> /dev/null
 }
+
+# spit out the contents of the nth line of a file
+linen(){
+  tail -n+$2 "$1" | head -n1
+}
