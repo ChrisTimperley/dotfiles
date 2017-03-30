@@ -198,6 +198,9 @@ bar {
 exec --no-startup-id dunst &
 exec --no-startup-id exec "start-pulseaudio-x11"
 
+# background
+exec --no-startup-id feh --bg-scale "${HOME}/.background"
+
 client.focused #859900 #859900 #fdf6e3 #6c71c4
 client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
 client.unfocused #073642 #073642 #93a1a1 #586e75
