@@ -1,3 +1,5 @@
+SHELL=/bin/bash
+
 all: bash_aliases bash_functions bashrc dockerfunc
 
 dockerfunc:

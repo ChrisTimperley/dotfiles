@@ -1,4 +1,6 @@
 #!/usr/bin/make -f
+SHELL=/bin/bash
+
 all: config i3blocks.conf
 
 config:

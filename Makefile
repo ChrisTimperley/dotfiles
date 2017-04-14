@@ -1,4 +1,6 @@
-all: i3 bash tmux git xorg zsh fonts ssh dyn-colours
+SHELL=/bin/bash
+
+all: tmux git bash dyn-colours ssh fonts zsh i3
 
 fonts:
 	${MAKE} -C fonts
@@ -21,7 +23,7 @@ xorg: bash
 ssh: bash
 	${MAKE} -C ssh
 
-i3: bash xorg
+i3: bash
 	${MAKE} -C i3
 
 dyn-colours:

@@ -1,3 +1,5 @@
+SHELL=/bin/bash
+
 all: tmux.conf
 
 tmux.conf:

@@ -1,6 +1,9 @@
-all: powerline
+all: powerline monaco
 
 powerline:
 	powerline/install.sh
 
-.PHONY: powerline
+monaco:
+	./monaco.sh
+
+.PHONY: powerline monaco
