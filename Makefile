@@ -7,7 +7,7 @@ git:
 		dotfilelink "${CURDIR}/gitconfig" "${HOME}/.tmux.conf"
 
 vim:
-	${MAKE} -c vim
+	${MAKE} -C vim
 
 fonts:
 	${MAKE} -C fonts
