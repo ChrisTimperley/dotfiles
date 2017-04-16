@@ -1,6 +1,13 @@
 SHELL=/bin/bash
 
-all: tmux git bash dyn-colours ssh fonts zsh i3
+all: tmux git bash dyn-colours ssh fonts zsh i3 xorg vim
+
+git:
+	@ source "${HOME}/.bashrc" && \
+		dotfilelink "${CURDIR}/gitconfig" "${HOME}/.tmux.conf"
+
+vim:
+	${MAKE} -c vim
 
 fonts:
 	${MAKE} -C fonts
@@ -31,4 +38,4 @@ dyn-colours:
 			git clone https://github.com/sos4nt/dynamic-colors ~/.dynamic-colors; \
 		fi
 
-.PHONY: bash zsh i3 git tmux xorg zsh fonts ssh dyn-colours
+.PHONY: bash zsh i3 git tmux xorg zsh fonts ssh dyn-colours vim
