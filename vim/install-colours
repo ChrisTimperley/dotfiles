@@ -1,0 +1,11 @@
+#!/bin/bash
+if [ ! -d "${HOME}/.vim/colors" ]; then
+  echo "[install-colors] installing: .vim/colors"
+  mkdir -p "${HOME}/.vim/colors"
+  wget https://github.com/daylerees/colour-schemes/archive/master.zip
+  unzip master.zip
+  mv colour-schemes-master/vim/colors/* "${HOME}/.vim/colors"
+  rm -rf master.zip colour-schemes-master
+else
+  echo "[install-colors] skipping: .vim/colors already exists"
+fi
