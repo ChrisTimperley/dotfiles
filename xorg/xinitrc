@@ -1,11 +1,10 @@
-setxkbmap gb
+# setxkbmap gb
 
 # start pulseaudio
-start-pulseaudio-x11
+# start-pulseaudio-x11
 
 # fix the typematic delay (and frequency)
 xset r rate 200 35
 
-autocutsel &
-
+# autocutsel &
 exec i3

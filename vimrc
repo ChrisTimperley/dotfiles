@@ -34,19 +34,15 @@ set t_vb=
 " Colours!
 syntax enable
 set hlsearch
-set background=dark
-colorscheme solarized
+" set background=dark
 set t_Co=256
+colorscheme solarized
 
 " airline
 set laststatus=2
 set encoding=utf-8
 set ttimeoutlen=50
 let g:airline_powerline_fonts=1
-"if !exists('g:airline_symbols')
-"  let g:airline_symbols = {}
-"endif
-"let g:airline_symbols.space = "\ua0"
 
 " Vundle
 set nocompatible
