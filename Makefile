@@ -1,6 +1,6 @@
 SHELL=/bin/bash
 
-all: tmux git bash dyn-colours ssh fonts zsh i3 xorg vim
+all: tmux git bash dyn-colours ssh fonts zsh i3 xorg vim terminator
 
 git:
 	@ source "${HOME}/.bashrc" && \
@@ -14,6 +14,9 @@ fonts:
 
 bash:
 	${MAKE} -C bash
+
+terminator:
+	${MAKE} -C terminator
 
 zsh:
 	${MAKE} -C zsh
