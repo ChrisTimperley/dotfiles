@@ -198,6 +198,9 @@ bar {
 exec --no-startup-id dunst &
 exec --no-startup-id exec "start-pulseaudio-x11"
 
+# transparency
+exec xcompmgr -c -f -n
+
 # background
 exec --no-startup-id feh --bg-scale "${HOME}/.background"
 
