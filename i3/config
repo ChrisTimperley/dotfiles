@@ -22,7 +22,7 @@ set $mod Mod4
 font pango:monospace 8
 
 # Remove the titlebar
-for_window [class="Chromium|Firefox|Chrome|Spotify"] border pixel 1
+for_window [class="Chromium|Firefox|Google-chrome|Spotify|Evince"] border pixel 1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
