@@ -6,5 +6,10 @@
 # fix the typematic delay (and frequency)
 xset r rate 200 35
 
+# disable screensaver
+xset s off
+xset -dpms
+xset s noblank
+
 # autocutsel &
 exec i3
