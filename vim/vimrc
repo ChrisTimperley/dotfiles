@@ -21,14 +21,14 @@ xnoremap p pgvy
 
 " Highlight text that exceeds the 80 column limit.
 " TODO: Doesn't work anymore
-highlight OverLength ctermbg=darkred ctermfg=white
-match OverLength /\%81v.\+/
+" highlight OverLength ctermbg=darkred ctermfg=white
+" match OverLength /\%81v.\+/
 
 " netrw
 let g:netrw_liststyle=3
 
 " spelling
-set spell spelllang=en_gb
+" set spell spelllang=en_gb
 
 " Kill the bells on Cygwin
 set vb
@@ -36,16 +36,29 @@ set t_vb=
 
 " Colours!
 syntax enable
-set hlsearch
-" set background=dark
-set t_Co=256
-colorscheme solarized
+set hlsearch " highlight all search matches
+" set t_Co=256
+" colo hydrangea
+
+" hi Normal ctermbg=none
 
 " airline
 set laststatus=2
 set encoding=utf-8
 set ttimeoutlen=50
 let g:airline_powerline_fonts=1
+
+" vim_markdown_preview
+" https://github.com/JamshedVesuna/vim-markdown-preview/wiki/Use-other-browser-to-preview-markdown
+let vim_markdown_preview_browser='Firefox'
+let vim_markdown_preview_github=1
+
+let g:livedown_browser='Firefox'
+let g:livedown_open=1
+let g:livedown_autorun=1
+
+"
+let g:vim_markdown_folding_disabled=1
 
 " Vundle
 set nocompatible
@@ -64,8 +77,12 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdtree'
+Plugin 'junegunn/seoul256.vim'
+Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'shime/vim-livedown'
 "Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'lervag/vimtex'
+Plugin 'yuttie/hydrangea-vim'
 
 call vundle#end()
 filetype plugin indent on
