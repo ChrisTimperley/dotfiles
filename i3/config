@@ -155,8 +155,10 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
 bindsym $mod+r mode "resize"
+
+# move workspace to another monitor
+bindsym $mod+m move workspace to output left
 
 # Workspace assignments
 for_window [class="Spotify"] move to workspace $WS4
@@ -210,4 +212,4 @@ client.unfocused #073642 #073642 #93a1a1 #586e75
 client.urgent #d33682 #d33682 #fdf6e3 #dc322f
 
 # set the typematic delay
-exec --no-startup-id xset r rate 200 35
+exec --no-startup-id xset r rate 150 35
