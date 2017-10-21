@@ -16,10 +16,28 @@ bibtex(){
               bibtex "$@"
 }
 
+detex(){
+  docker run  --rm -i --user="$(id -u):$(id -g)" \
+              --log-driver none \
+              --net=none \
+              -v "$PWD":/data \
+              blang/latex \
+              detex "$@"
+}
+
 pdftk(){
   docker run  --rm \
               --log-driver none \
               --net=none \
               -v "$PWD":/data \
               christimperley/pdftk "$@"
+}
+
+
+mpsyt(){
+  sudo docker run --rm -it \
+                  --privileged \
+                  -v /dev/snd:/dev/snd \
+                  --name mpsyt \
+                  rothgar/mpsyt
 }

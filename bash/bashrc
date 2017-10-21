@@ -5,3 +5,8 @@ export VISUAL="vim"
 [[ -f "${HOME}/.dockerfunc" ]] && source "${HOME}/.dockerfunc"
 
 export PATH="${HOME}/.dynamic-colors/bin:${PATH}"
+
+# initialise opam
+if which opam &> /dev/null; then
+  eval $(opam config env)
+fi

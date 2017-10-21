@@ -30,3 +30,12 @@ gtfo(){
 linen(){
   tail -n+$2 "$1" | head -n1
 }
+
+acevlc(){
+  aceid=$1
+  echo "${aceid}"
+  docker run -d -t --name aceproxy -p 8000:8000 ikatson/aceproxy
+  sleep 5s
+  cvlc --open "http://localhost:8000/pid/${aceid}/steam.mp4"
+  docker rm -f aceproxy 
+}
