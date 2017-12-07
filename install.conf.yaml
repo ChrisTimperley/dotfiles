@@ -22,5 +22,6 @@
     ~/.Xdefaults: xorg/Xdefaults
 
 - shell:
+    - ["installers/i3.sh", "Installing i3"]
     - ["git submodule update --init --recursive dynamic-colors", "Installing dynamic colors"]
     - ["vim +PluginInstall +qall", "Installing vim plugins"]
