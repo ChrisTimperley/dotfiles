@@ -20,7 +20,6 @@
 
 - shell:
     - ["mkdir -p ~/.ssh", "Setup ssh"]
-    - ["mkdir -p ~/.config/terminator", "Installing terminator"]
     - ["which emacs || sudo apt install -y emacs-nox", "Instaling emacs"]
     - ["git submodule update --init --recursive dynamic-colors", "Installing dynamic colors"]
 
