@@ -23,14 +23,21 @@
     - ["which emacs || sudo apt install -y emacs-nox", "Instaling emacs"]
     - ["git submodule update --init --recursive dynamic-colors", "Installing dynamic colors"]
 
+# zsh
+- link:
+    ~/.zshrc: zsh/zshrc
+- shell:
+    - ["which zsh || sudo apt install -y zsh", "Installing zsh"]
+    - ["git submodule update --init --recursive zsh/antigen", "Installing antigen"]
+
 # docker
 - shell:
     - ["installers/docker", "Installing docker"]
 
 # powerline fonts
 - shell:
-  - ["git submodule update --init --recursive fonts/powerline", "Preparing powerline fonts"]
-  - ["(cd fonts/powerline && ./install.sh)", "Installing powerline fonts"]
+    - ["git submodule update --init --recursive fonts/powerline", "Preparing powerline fonts"]
+    - ["(cd fonts/powerline && ./install.sh)", "Installing powerline fonts"]
 
 # vim
 - shell:

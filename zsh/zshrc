@@ -25,3 +25,9 @@ export PATH="$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin"
 export PATH="${HOME}/.dynamic-colors/bin:${PATH}"
 [[ -d "${HOME}/.dynamic-colors" ]] && \
   source "$HOME/.dynamic-colors/completions/dynamic-colors.zsh"
+
+
+# =============================================================================
+# antigen
+# =============================================================================
+source ~/.dotfiles/zsh/antigen/antigen.zsh
