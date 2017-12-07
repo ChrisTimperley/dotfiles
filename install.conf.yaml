@@ -31,5 +31,9 @@
     - ["vim +PluginInstall +qall", "Installing vim plugins"]
 
 - link:
-    ~/.config/i3/config: i3/config
-    ~/.i3blocks.conf: i3/i3blocks.conf
+    ~/.config/i3/config:
+      path: i3/config
+      force: true
+    ~/.i3blocks.conf:
+      path: i3/i3blocks.conf
+      force: true
