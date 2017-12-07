@@ -9,6 +9,10 @@
     ~/.vimrc: vim/vimrc
     ~/.tmuxconf: tmux/tmux.conf
     ~/.gitconfig: git/gitconfig
+    ~/.bashrc: bash/bashrc
+    ~/.bash_aliases: bash/bash_aliases
+    ~/.bash_functions: bash/bash_functions
+    ~/.dockerfunc: bash/dockerfunc
 
 - shell:
     - ["vim +PluginInstall +qall", "Installing vim plugins"]
