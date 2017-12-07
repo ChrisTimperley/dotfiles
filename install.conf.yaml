@@ -18,6 +18,8 @@
     ~/.config/i3/config: i3/config
     ~/.i3blocks.conf: i3/i3blocks.conf
     ~/.ssh/config: ssh/config
+    ~/.xinitrc: xorg/xinitrc
+    ~/.Xdefaults: xorg/Xdefaults
 
 - shell:
     - ["git submodule update --init --recursive dynamic-colors", "Installing dynamic colors"]
