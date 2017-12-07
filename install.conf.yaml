@@ -9,3 +9,6 @@
     ~/.vimrc: vim/vimrc
     ~/.tmuxconf: tmux/tmux.conf
     ~/.gitconfig: git/gitconfig
+
+- shell:
+    - ["vim +PluginInstall +qall", "Installing vim plugins"]
