@@ -1,0 +1,11 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+  ~/.vim: vim
+  ~/.vimrc: vim/vimrc
+  ~/.tmuxconf: tmux/tmux.conf
+  ~/.gitconfig: git/gitconfig
