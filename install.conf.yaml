@@ -10,7 +10,9 @@
     ~/.vimrc: vim/vimrc
     ~/.tmuxconf: tmux/tmux.conf
     ~/.gitconfig: git/gitconfig
-    ~/.bashrc: bash/bashrc
+    ~/.bashrc:
+      path: bash/bashrc
+      force: true
     ~/.bash_aliases: bash/bash_aliases
     ~/.bash_functions: bash/bash_functions
     ~/.dockerfunc: bash/dockerfunc
