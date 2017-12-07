@@ -22,9 +22,7 @@
     - ["mkdir -p ~/.ssh", "Setup ssh"]
     - ["mkdir -p ~/.config/terminator", "Installing terminator"]
     - ["which emacs || sudo apt install -y emacs-nox", "Instaling emacs"]
-    - ["which vim || sudo apt install -y vim", "Instaling vim"]
     - ["git submodule update --init --recursive dynamic-colors", "Installing dynamic colors"]
-    - ["vim +PluginInstall +qall", "Installing vim plugins"]
 
 # vim
 - shell:
