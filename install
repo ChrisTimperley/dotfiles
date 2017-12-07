@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 set -e
 
+# ensure user belongs to sudo group
+if ! groups $(whoami) | grep -q sudo; then
+  echo "Adding user to sudo group"
+  sudo usermod -aG sudo $(whoami) &> /dev/null
+  echo "\nYOU MUST RELOGIN TO CONTINUE INSTALLATION"
+  exit 0
+fi
+
 CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
 
