@@ -16,10 +16,18 @@
     ~/.bash_aliases: bash/bash_aliases
     ~/.bash_functions: bash/bash_functions
     ~/.dockerfunc: bash/dockerfunc
-    ~/.config/terminator/config: terminator/config
     ~/.ssh/config: ssh/config
     ~/.xinitrc: xorg/xinitrc
     ~/.Xdefaults: xorg/Xdefaults
+
+- shell:
+    - ["which terminator || sudo apt install -y terminator", "Installing terminator"]
+    - ["mkdir -p ~/.config/terminator", "Setup terminator"]
+
+- link:
+    ~/.config/terminator/config:
+      path: terminator/config
+      force: true
 
 - shell:
     - ["mkdir -p ~/.ssh", "Setup ssh"]
