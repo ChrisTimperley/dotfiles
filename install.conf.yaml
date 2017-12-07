@@ -14,6 +14,7 @@
     ~/.bash_aliases: bash/bash_aliases
     ~/.bash_functions: bash/bash_functions
     ~/.dockerfunc: bash/dockerfunc
+    ~/.config/terminator/config: terminator/config
 
 - shell:
     - ["git submodule update --init --recursive dynamic-colors", "Installing dynamic colors"]

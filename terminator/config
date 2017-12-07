@@ -4,8 +4,6 @@
 [keybindings]
 [layouts]
   [[default]]
-    
-    
     [[[child1]]]
       parent = window0
       type = Terminal
