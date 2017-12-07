@@ -17,8 +17,6 @@
     ~/.bash_functions: bash/bash_functions
     ~/.dockerfunc: bash/dockerfunc
     ~/.config/terminator/config: terminator/config
-    ~/.config/i3/config: i3/config
-    ~/.i3blocks.conf: i3/i3blocks.conf
     ~/.ssh/config: ssh/config
     ~/.xinitrc: xorg/xinitrc
     ~/.Xdefaults: xorg/Xdefaults
@@ -31,3 +29,7 @@
     - ["which vim || sudo apt install -y vim", "Instaling vim"]
     - ["git submodule update --init --recursive dynamic-colors", "Installing dynamic colors"]
     - ["vim +PluginInstall +qall", "Installing vim plugins"]
+
+- link:
+    ~/.config/i3/config: i3/config
+    ~/.i3blocks.conf: i3/i3blocks.conf
