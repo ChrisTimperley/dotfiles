@@ -31,3 +31,8 @@ export PATH="${HOME}/.dynamic-colors/bin:${PATH}"
 # antigen
 # =============================================================================
 source ~/.dotfiles/zsh/antigen/antigen.zsh
+
+POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+
+antigen theme bhilburn/powerlevel9k powerlevel9k
+antigen apply
