@@ -1,5 +1,10 @@
 [user]
-  name = Chris Timperley
   email = christimperley@googlemail.com
+  name = ChrisTimperley
 [push]
-	default = matching
+  default = matching
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
