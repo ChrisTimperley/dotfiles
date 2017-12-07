@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+if ! which python3 &> /dev/null || ! python3 -V | grep -q "Python 3.6.3"; then
+  echo "Installing Python 3.6.3..."
+  wget -O /tmp/python.tar.xz -nv https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tar.xz && \
+  tar -C /tmp -xf /tmp/python.tar.xz && \
+  (cd "/tmp/Python-3.6.3" && ./configure && make && sudo make install) && \
+  echo "Installed Python 3.6.3"
+  rm -rf /tmp/python.tar.xz "/tmp/Python-3.6.3"
+fi

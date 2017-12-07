@@ -22,6 +22,8 @@
     - ["mkdir -p ~/.ssh", "Setup ssh"]
     - ["which emacs || sudo apt install -y emacs-nox", "Instaling emacs"]
     - ["git submodule update --init --recursive dynamic-colors", "Installing dynamic colors"]
+    - ["installers/docker", "Installing docker"]
+    - ["installers/python", "Installing Python 3.6.3"]
 
 # zsh
 - link:
@@ -32,7 +34,6 @@
 
 # docker
 - shell:
-    - ["installers/docker", "Installing docker"]
 
 # powerline fonts
 - shell:
