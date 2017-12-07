@@ -5,6 +5,7 @@
 - clean: ['~']
 
 - link:
+    ~/.dynamic-colors: dynamic-colors
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
     ~/.tmuxconf: tmux/tmux.conf
@@ -15,4 +16,5 @@
     ~/.dockerfunc: bash/dockerfunc
 
 - shell:
+    - ["git submodule update --init --recursive dynamic-colors", "Installing dynamic colors"]
     - ["vim +PluginInstall +qall", "Installing vim plugins"]
