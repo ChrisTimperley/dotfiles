@@ -31,6 +31,11 @@ linen(){
   tail -n+$2 "$1" | head -n1
 }
 
+# reclaims ownership of a given directory for the current user
+reclaim(){
+  sudo chown -R $(whoami) "$1"
+}
+
 acevlc(){
   aceid=$1
   echo "${aceid}"
