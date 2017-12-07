@@ -34,5 +34,7 @@ source ~/.dotfiles/zsh/antigen/antigen.zsh
 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 
+DEFAULT_USER=${USER}
+
 antigen theme bhilburn/powerlevel9k powerlevel9k
 antigen apply
