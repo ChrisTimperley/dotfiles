@@ -23,5 +23,6 @@
 
 - shell:
     - ["installers/i3.sh", "Installing i3"]
+    - ["which emacs || sudo apt-get install -y emacs-nox", "Instaling emacs"]
     - ["git submodule update --init --recursive dynamic-colors", "Installing dynamic colors"]
     - ["vim +PluginInstall +qall", "Installing vim plugins"]
