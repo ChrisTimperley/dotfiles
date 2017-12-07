@@ -1,10 +1,11 @@
 filetype plugin on
 filetype indent on
 
-set tabstop=2
-set shiftwidth=2
-set smarttab
+" only use spaces for indentation
 set expandtab
+set softtabstop=2
+set shiftwidth=2
+
 set number
 set shellslash
 
@@ -39,6 +40,7 @@ syntax enable
 set hlsearch " highlight all search matches
 " set t_Co=256
 " colo hydrangea
+" color smyck
 
 " hi Normal ctermbg=none
 
@@ -50,12 +52,12 @@ let g:airline_powerline_fonts=1
 
 " vim_markdown_preview
 " https://github.com/JamshedVesuna/vim-markdown-preview/wiki/Use-other-browser-to-preview-markdown
-let vim_markdown_preview_browser='Firefox'
-let vim_markdown_preview_github=1
-
-let g:livedown_browser='Firefox'
-let g:livedown_open=1
-let g:livedown_autorun=1
+" let vim_markdown_preview_browser='Firefox'
+" let vim_markdown_preview_github=1
+"
+" let g:livedown_browser='Firefox'
+" let g:livedown_open=1
+" let g:livedown_autorun=1
 
 "
 let g:vim_markdown_folding_disabled=1
@@ -80,9 +82,18 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'shime/vim-livedown'
+Plugin 'khzaw/vim-conceal'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'nvie/vim-flake8'
 "Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'lervag/vimtex'
-Plugin 'yuttie/hydrangea-vim'
+"Plugin 'yuttie/hydrangea-vim'
 
 call vundle#end()
 filetype plugin indent on
+
+let $LOCALFILE=expand("~/.vimrc_local")
+if filereadable($LOCALFILE)
+  source $LOCALFILE
+endif
