@@ -23,6 +23,10 @@
     - ["which emacs || sudo apt install -y emacs-nox", "Instaling emacs"]
     - ["git submodule update --init --recursive dynamic-colors", "Installing dynamic colors"]
 
+# docker
+- shell:
+    - ["install/docker", "Installing docker"]
+
 # powerline fonts
 - shell:
   - ["git submodule update --init --recursive fonts/powerline", "Preparing powerline fonts"]
