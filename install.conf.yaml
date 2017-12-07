@@ -25,7 +25,7 @@
 
 # docker
 - shell:
-    - ["install/docker", "Installing docker"]
+    - ["installers/docker", "Installing docker"]
 
 # powerline fonts
 - shell:
