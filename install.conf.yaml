@@ -6,8 +6,6 @@
 
 - link:
     ~/.dynamic-colors: dynamic-colors
-    ~/.vim: vim
-    ~/.vimrc: vim/vimrc
     ~/.tmuxconf: tmux/tmux.conf
     ~/.gitconfig: git/gitconfig
     ~/.bashrc:
@@ -27,6 +25,14 @@
     - ["which vim || sudo apt install -y vim", "Instaling vim"]
     - ["git submodule update --init --recursive dynamic-colors", "Installing dynamic colors"]
     - ["vim +PluginInstall +qall", "Installing vim plugins"]
+
+# vim
+- shell:
+    - ["which vim || sudo apt install -y vim", "Instaling vim"]
+    - ["vim +PluginInstall +qall", "Installing vim plugins"]
+- link:
+    ~/.vim: vim
+    ~/.vimrc: vim/vimrc
 
 # terminator
 - shell:
