@@ -58,3 +58,7 @@
     ~/.i3blocks.conf:
       path: i3/i3blocks.conf
       force: true
+
+# spotify
+- shell:
+    - ["which spotify || sudo apt install -y spotify", "Installing spotify"]
