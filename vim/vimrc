@@ -69,6 +69,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Vundle plugins
+Plugin 'OCamlPro/ocp-indent'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'JuliaLang/julia-vim'
 Plugin 'morhetz/gruvbox'
@@ -93,7 +94,9 @@ Plugin 'nvie/vim-flake8'
 call vundle#end()
 filetype plugin indent on
 
-let $LOCALFILE=expand("~/.vimrc_local")
-if filereadable($LOCALFILE)
-  source $LOCALFILE
-endif
+" let $LOCALFILE=expand("~/.vimrc_local")
+" if filereadable($LOCALFILE)
+"   source $LOCALFILE
+" endif
+
+autocmd FileType ocaml source '/home/chris/.vim/bundle/ocp-indent/tools/ocp-indent.vim'
