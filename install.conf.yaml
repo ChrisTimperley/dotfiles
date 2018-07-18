@@ -32,9 +32,6 @@
     - ["which zsh || sudo apt install -y zsh", "Installing zsh"]
     - ["git submodule update --init --recursive zsh/antigen", "Installing antigen"]
 
-# docker
-- shell:
-
 # powerline fonts
 - shell:
     - ["git submodule update --init --recursive fonts/powerline", "Preparing powerline fonts"]
@@ -71,6 +68,9 @@
       path: i3/i3blocks.conf
       force: true
 
-# spotify
 - shell:
     - ["which spotify || sudo apt snap install spotify", "Installing spotify"]
+- shell:
+    - ["which slack || sudo apt snap install slack --classic", "Installing slack"]
+- shell:
+    - ["which docker || sudo apt snap install docker", "Installing docker"]
