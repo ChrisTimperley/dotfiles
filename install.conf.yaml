@@ -69,8 +69,13 @@
       force: true
 
 - shell:
-    - ["which spotify || sudo apt snap install spotify", "Installing spotify"]
+    - ["which spotify || sudo snap install spotify", "Installing spotify"]
 - shell:
-    - ["which slack || sudo apt snap install slack --classic", "Installing slack"]
+    - ["which slack || sudo snap install slack --classic", "Installing slack"]
+
+# docker
 - shell:
-    - ["which docker || sudo apt snap install docker", "Installing docker"]
+    - ["which docker || ( sudo addgroup --system docker
+                          && sudo adduser ${USER} docker
+                          && newgrp docker
+                          && sudo snap install docker)", "Installing docker"]
