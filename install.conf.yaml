@@ -73,4 +73,4 @@
 
 # spotify
 - shell:
-    - ["which spotify || sudo apt install -y spotify", "Installing spotify"]
+    - ["which spotify || sudo apt snap install spotify", "Installing spotify"]
