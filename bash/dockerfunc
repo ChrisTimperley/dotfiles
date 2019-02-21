@@ -38,6 +38,7 @@ mpsyt(){
   sudo docker run --rm -it \
                   --privileged \
                   -v /dev/snd:/dev/snd \
+                  -v "${HOME}/.mps:/root/mps" \
                   --name mpsyt \
                   rothgar/mpsyt
 }

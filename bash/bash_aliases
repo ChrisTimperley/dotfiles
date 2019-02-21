@@ -14,3 +14,5 @@ fi
 alias sudo='sudo '
 
 alias cdls='cd $1 && ls'
+
+alias curlj="curl -H 'Content-Type: application/json' -d $1 $2"
