@@ -1,5 +1,5 @@
 [global_config]
-  title_font = Monaco 9
+  title_font = Monaco 11
   title_use_system_font = False
 [keybindings]
 [layouts]
