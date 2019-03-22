@@ -15,7 +15,6 @@ let g:netrw_liststyle=3
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BINDINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Allow pasting to multiple locations.
 " 'p' to paste, 'gv' to re-select text original intended for copying, 'y'
 " to copy again.
@@ -26,7 +25,6 @@ set pastetoggle=<F2>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SYNTAX HIGHLIGHTING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax enable
 set hlsearch " highlight all search matches
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -49,4 +47,5 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
 call plug#end()
