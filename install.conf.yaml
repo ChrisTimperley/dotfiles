@@ -20,16 +20,12 @@
 
 - shell:
     - ["mkdir -p ~/.ssh", "Setup ssh"]
-    - ["which emacs || sudo apt install -y emacs-nox", "Instaling emacs"]
     - ["git submodule update --init --recursive dynamic-colors", "Installing dynamic colors"]
-    - ["installers/docker", "Installing docker"]
-    - ["installers/python", "Installing Python 3.6.3"]
 
 # zsh
 - link:
     ~/.zshrc: zsh/zshrc
 - shell:
-    - ["which zsh || sudo apt install -y zsh", "Installing zsh"]
     - ["git submodule update --init --recursive zsh/antigen", "Installing antigen"]
 
 # powerline fonts
@@ -39,11 +35,14 @@
 
 # vim
 - shell:
-    - ["which vim || sudo apt install -y vim", "Instaling vim"]
     - ["vim +PluginInstall +qall", "Installing vim plugins"]
 - link:
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
+
+# nvim
+- link:
+    ~/.config/nvim/init.vim: nvim/init.vim
 
 # terminator
 - shell:
@@ -67,15 +66,3 @@
     ~/.i3blocks.conf:
       path: i3/i3blocks.conf
       force: true
-
-- shell:
-    - ["which spotify || sudo snap install spotify", "Installing spotify"]
-- shell:
-    - ["which slack || sudo snap install slack --classic", "Installing slack"]
-
-# docker
-- shell:
-    - ["which docker || ( sudo addgroup --system docker
-                          && sudo adduser ${USER} docker
-                          && newgrp docker
-                          && sudo snap install docker)", "Installing docker"]
