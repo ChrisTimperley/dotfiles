@@ -28,14 +28,6 @@ set pastetoggle=<F2>
 set hlsearch " highlight all search matches
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-airline
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set laststatus=2
-set encoding=utf-8
-set ttimeoutlen=50
-let g:airline_powerline_fonts=1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS (vim-plug)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " automatically install plug
@@ -46,6 +38,22 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
+" enhanced statusline
 Plug 'vim-airline/vim-airline'
+set laststatus=2
+set encoding=utf-8
+set ttimeoutlen=50
+let g:airline_powerline_fonts=1
+
+" git wrapper
 Plug 'tpope/vim-fugitive'
+
+" shows a git diff in the gutter and allows hunks to be staged/reset
+Plug 'airblade/vim-gitgutter'
+
+" highlights yanked text
+Plug 'machakann/vim-highlightedyank'
+
+" asynchronous linting and build automation
+Plug 'neomake/neomake'
 call plug#end()
