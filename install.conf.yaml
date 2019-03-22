@@ -44,6 +44,12 @@
 - link:
     ~/.config/nvim/init.vim: nvim/init.vim
 
+# polybar
+- link:
+    ~/.config/polybar/config:
+      create: true
+      path: polybar/config
+
 # terminator
 - shell:
     - ["which terminator || sudo apt install -y terminator", "Installing terminator"]
