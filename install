@@ -9,9 +9,6 @@ if ! groups $(whoami) | grep -q sudo; then
   exit 0
 fi
 
-# install Vundle
-git submodule update --init --recursive vim/bundle/Vundle.vim
-
 # install and run dotbot
 CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
