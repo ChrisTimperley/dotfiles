@@ -307,13 +307,13 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+label-volume = 
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇
-label-muted-foreground = #666
+format-muted-prefix =  
+label-muted = _______
 
-bar-volume-width = 10
+bar-volume-width = 8
 bar-volume-foreground-0 = #55aa55
 bar-volume-foreground-1 = #55aa55
 bar-volume-foreground-2 = #55aa55
