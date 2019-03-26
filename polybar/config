@@ -303,11 +303,6 @@ format-underline = ${colors.white}
 format-foreground = ${colors.white}
 format-padding = 1
 
-; time = %H:%M
-; time-alt = %H:%M
-; format-prefix =
-; label = %date% %time%
-
 [module/pulseaudio]
 type = internal/pulseaudio
 
