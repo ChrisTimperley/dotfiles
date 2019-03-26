@@ -24,14 +24,15 @@ background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #ffb52a
+; primary = #ffb52a
+primary = #ffffff
 secondary = #e60053
 alert = #bd2c40
 
 [bar/top]
 enable-ipc = true
 width = 100%
-height = 27
+height = 30
 radius = 6.0
 
 font-0 = "Noto Sans:pixelsize=10;1"
@@ -51,7 +52,7 @@ modules-left = i3
 modules-right = filesystem cpu battery temperature date pulseaudio powermenu
 
 line = ${bar/top.background}
-line-size = 1
+line-size = 3
 
 tray-position = right
 tray-padding = 2
@@ -364,32 +365,31 @@ type = internal/battery
 ; adapter = AC0
 full-at = 98
 
+time-format = %H:%M
+
 format-charging = <animation-charging> <label-charging>
 ; format-charging-underline = #ffb52a
 
-format-discharging = <animation-discharging> <label-discharging>
+label-discharging = %percentage%% (%time%)
+format-discharging = <ramp-capacity> <label-discharging>
 ; format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 ; format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
 animation-charging-framerate = 750
-
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-foreground = ${colors.foreground-alt}
-animation-discharging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
