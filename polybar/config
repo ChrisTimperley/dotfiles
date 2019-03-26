@@ -31,6 +31,12 @@ primary = #ffffff
 secondary = #e60053
 alert = #bd2c40
 white = #d1d1d1
+gray = #585858
+black = #090909
+red = #c795ae
+blue = #95aec7
+yellow = #c7ae95
+green = #aec795
 
 [bar/top]
 enable-ipc = true
@@ -394,22 +400,14 @@ animation-charging-framerate = 750
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 80
-
-; format-underline = #f50a4d
-; format-warn-underline = ${self.format-underline}
-
-; label-warn-foreground = ${colors.secondary}
-; ramp-foreground = ${colors.foreground-alt}
-
-format = <ramp> <label>
-format-warn = <ramp> <label-warn>
-
-label = %temperature-c%
-label-warn = %temperature-c%
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+format = <label>
+format-warn = <label-warn>
+label =   %temperature-c%
+label-warn =   %temperature-c%
+format-underline = ${colors.white}
+format-warn-underline = ${colors.red}
+format-padding = 1
+format-warn-padding = 1
 
 [module/powermenu]
 type = custom/menu
