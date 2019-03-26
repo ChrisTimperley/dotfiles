@@ -297,16 +297,16 @@ format-disconnected =
 [module/date]
 type = internal/date
 interval = 5
+date-alt =  %A  %H:%M 
+date =  %b %d  %H:%M 
+format-underline = ${colors.white}
+format-foreground = ${colors.white}
+format-padding = 1
 
-date =
-date-alt = " %a, %b %d, "
-
-time = %H:%M
-time-alt = %H:%M
-
-format-prefix =
-
-label = %date% %time%
+; time = %H:%M
+; time-alt = %H:%M
+; format-prefix =
+; label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
