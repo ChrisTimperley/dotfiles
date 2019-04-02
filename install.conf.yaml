@@ -21,6 +21,13 @@
     ~/.vimrc: vim/vimrc
     ~/.config/nvim/init.vim: nvim/init.vim
 
+    # i3
+    ~/.config/i3/config:
+      path: i3/config
+      force: true
+    ~/.i3blocks.conf:
+      path: i3/i3blocks.conf
+      force: true
 
 - shell:
     - ["mkdir -p ~/.ssh", "Setup ssh"]
@@ -50,18 +57,4 @@
 - link:
     ~/.config/terminator/config:
       path: terminator/config
-      force: true
-
-# i3
-- shell:
-    - ["which i3 || sudo apt install -y i3", "Installing i3"]
-    - ["which i3status || sudo apt install -y i3status", "Installing i3status"]
-    - ["which i3blocks || sudo apt install -y i3blocks", "Installing i3blocks"]
-    - ["mkdir -p ~/.config/i3", "Setup i3 config"]
-- link:
-    ~/.config/i3/config:
-      path: i3/config
-      force: true
-    ~/.i3blocks.conf:
-      path: i3/i3blocks.conf
       force: true
