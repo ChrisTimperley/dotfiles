@@ -17,6 +17,10 @@
     ~/.ssh/config: ssh/config
     ~/.xinitrc: xorg/xinitrc
     ~/.Xdefaults: xorg/Xdefaults
+    ~/.vim: vim
+    ~/.vimrc: vim/vimrc
+    ~/.config/nvim/init.vim: nvim/init.vim
+
 
 - shell:
     - ["mkdir -p ~/.ssh", "Setup ssh"]
@@ -32,17 +36,6 @@
 - shell:
     - ["git submodule update --init --recursive fonts/powerline", "Preparing powerline fonts"]
     - ["(cd fonts/powerline && ./install.sh)", "Installing powerline fonts"]
-
-# vim
-- shell:
-    - ["vim +PluginInstall +qall", "Installing vim plugins"]
-- link:
-    ~/.vim: vim
-    ~/.vimrc: vim/vimrc
-
-# nvim
-- link:
-    ~/.config/nvim/init.vim: nvim/init.vim
 
 # polybar
 - link:
