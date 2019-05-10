@@ -1,3 +1,7 @@
+# https://unix.stackexchange.com/questions/18231/scp-fails-without-error
+# If not running interactively, don't do anything
+[[ $- == *i* ]] || return
+
 export VISUAL="nvim"
 export EDITOR="vim"
 
