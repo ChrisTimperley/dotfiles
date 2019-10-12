@@ -3,27 +3,9 @@ is_ubuntu(){
   lsb_release -a |& grep -q "Ubuntu"
 }
 
-# Installs a dotfile by creating a symbolic link (if the file hasn't already
-# been installed)
-dotfilelink(){
-  to=$1
-  from=$2
-  if (test -f "${from}"); then
-    echo "[dotfilelink] skipping: ${from} -> ${to} (already exists)"
-  else 
-    echo "[dotfilelink] linking: ${from} -> ${to}"
-    ln -s "${to}" "${from}"
-  fi
-}
-
 # Give ownership of a directory to a given user
 repossess(){
   sudo chown -R $(whoami) "$1"
-}
-
-gtfo(){
-  docker-nuke &> /dev/null
-  rm -rf /tmp/* &> /dev/null
 }
 
 # spit out the contents of the nth line of a file

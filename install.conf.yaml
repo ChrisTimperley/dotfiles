@@ -11,12 +11,26 @@
     ~/.bashrc:
       path: bash/bashrc
       force: true
+    ~/.bash_profile:
+      path: bash/bash_profile
+      force: true
     ~/.bash_aliases: bash/bash_aliases
     ~/.bash_functions: bash/bash_functions
     ~/.dockerfunc: bash/dockerfunc
     ~/.ssh/config: ssh/config
     ~/.xinitrc: xorg/xinitrc
     ~/.Xdefaults: xorg/Xdefaults
+    ~/.vim: vim
+    ~/.vimrc: vim/vimrc
+    ~/.config/nvim/init.vim: nvim/init.vim
+
+    # i3
+    ~/.config/i3/config:
+      path: i3/config
+      force: true
+    ~/.i3blocks.conf:
+      path: i3/i3blocks.conf
+      force: true
 
 - shell:
     - ["mkdir -p ~/.ssh", "Setup ssh"]
@@ -33,17 +47,6 @@
     - ["git submodule update --init --recursive fonts/powerline", "Preparing powerline fonts"]
     - ["(cd fonts/powerline && ./install.sh)", "Installing powerline fonts"]
 
-# vim
-- shell:
-    - ["vim +PluginInstall +qall", "Installing vim plugins"]
-- link:
-    ~/.vim: vim
-    ~/.vimrc: vim/vimrc
-
-# nvim
-- link:
-    ~/.config/nvim/init.vim: nvim/init.vim
-
 # polybar
 - link:
     ~/.config/polybar/config:
@@ -57,18 +60,4 @@
 - link:
     ~/.config/terminator/config:
       path: terminator/config
-      force: true
-
-# i3
-- shell:
-    - ["which i3 || sudo apt install -y i3", "Installing i3"]
-    - ["which i3status || sudo apt install -y i3status", "Installing i3status"]
-    - ["which i3blocks || sudo apt install -y i3blocks", "Installing i3blocks"]
-    - ["mkdir -p ~/.config/i3", "Setup i3 config"]
-- link:
-    ~/.config/i3/config:
-      path: i3/config
-      force: true
-    ~/.i3blocks.conf:
-      path: i3/i3blocks.conf
       force: true
