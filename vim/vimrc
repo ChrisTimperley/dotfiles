@@ -69,7 +69,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Vundle plugins
-Plugin 'OCamlPro/ocp-indent'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'JuliaLang/julia-vim'
 Plugin 'morhetz/gruvbox'
