@@ -1,4 +1,8 @@
-# ChrisTimperley's dotfiles
+# dotfiles
+
+## Prerequisites
+
+* [light](https://github.com/haikarainen/light)
 
 ## Installation
 

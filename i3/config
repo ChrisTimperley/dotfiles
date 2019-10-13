@@ -174,8 +174,10 @@ bindsym $mod+Control+Left workspace prev
 bindsym $mod+Control+Right workspace next
 
 # Multimedia keys
-bindsym XF86MonBrightnessUp exec "xbacklight +5"
-bindsym XF86MonBrightnessDown exec "xbacklight -5"
+# bindsym XF86MonBrightnessUp exec "xbacklight +5"
+# bindsym XF86MonBrightnessDown exec "xbacklight -5"
+bindsym XF86MonBrightnessUp exec "light -A 5"
+bindsym XF86MonBrightnessDown exec "light -U 5"
 
 # Use ALSA mixer to control audio via media keys
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ +5%"
