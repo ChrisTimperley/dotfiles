@@ -54,6 +54,9 @@ Plug 'airblade/vim-gitgutter'
 " highlights yanked text
 Plug 'machakann/vim-highlightedyank'
 
+" pretty tree explorer
+Plug 'preservim/nerdtree'
+
 " asynchronous linting and build automation
 Plug 'neomake/neomake'
 call plug#end()
