@@ -16,7 +16,6 @@
       force: true
     ~/.bash_aliases: bash/bash_aliases
     ~/.bash_functions: bash/bash_functions
-    ~/.dockerfunc: bash/dockerfunc
     ~/.ssh/config: ssh/config
     ~/.xinitrc: xorg/xinitrc
     ~/.Xdefaults: xorg/Xdefaults
