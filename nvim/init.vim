@@ -48,6 +48,10 @@ let g:airline_powerline_fonts=1
 " git wrapper
 Plug 'tpope/vim-fugitive'
 
+" no more nasty whitespace
+" :StripWhitespace is a cool macro!
+Plug 'ntpeters/vim-better-whitespace'
+
 " shows a git diff in the gutter and allows hunks to be staged/reset
 Plug 'airblade/vim-gitgutter'
 
