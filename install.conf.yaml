@@ -6,7 +6,7 @@
 
 - link:
     ~/.dynamic-colors: dynamic-colors
-    ~/.tmuxconf: tmux/tmux.conf
+    ~/.tmux.conf: tmux/tmux.conf
     ~/.gitconfig: git/gitconfig
     ~/.bashrc:
       path: bash/bashrc
@@ -21,15 +21,17 @@
     ~/.Xdefaults: xorg/Xdefaults
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
-    ~/.config/nvim/init.vim: nvim/init.vim
+    ~/.config/nvim/init.vim:
+      path: nvim/init.vim
+      create: true
     ~/.ptpython/config.py:
       path: ptpython/config.py
-      force: true
+      create: true
 
     # i3
     ~/.config/i3/config:
       path: i3/config
-      force: true
+      create: true
     ~/.i3blocks.conf:
       path: i3/i3blocks.conf
       force: true
