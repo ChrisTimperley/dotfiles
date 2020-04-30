@@ -63,4 +63,9 @@ Plug 'preservim/nerdtree'
 
 " asynchronous linting and build automation
 Plug 'neomake/neomake'
+
+" fast code completion
+Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --clang-completer' }
+let g:ycm_global_ycm_extra_conf = '~/.config/nvim/.ycm_extra_conf.py'
+
 call plug#end()

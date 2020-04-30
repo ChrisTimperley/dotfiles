@@ -24,6 +24,9 @@
     ~/.config/nvim/init.vim:
       path: nvim/init.vim
       create: true
+    ~/.config/nvim/.ycm_extra_conf.py:
+      path: nvim/ycm_extra_conf.py
+      create: true
     ~/.ptpython/config.py:
       path: ptpython/config.py
       create: true
