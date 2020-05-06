@@ -64,8 +64,16 @@ Plug 'preservim/nerdtree'
 " asynchronous linting and build automation
 Plug 'neomake/neomake'
 
+" support for Rust
+Plug 'rust-lang/rust.vim'
+
 " fast code completion
 Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --clang-completer' }
 let g:ycm_global_ycm_extra_conf = '~/.config/nvim/.ycm_extra_conf.py'
+let g:ycm_filetype_blacklist = {
+      \ 'tex': 1,
+      \ 'latex': 1
+      \}
+highlight YcmWarningLine guibg=#fca103
 
 call plug#end()
