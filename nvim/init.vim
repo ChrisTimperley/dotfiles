@@ -45,6 +45,9 @@ set encoding=utf-8
 set ttimeoutlen=50
 let g:airline_powerline_fonts=1
 
+" colour schemes
+Plug 'flazz/vim-colorschemes'
+
 " git wrapper
 Plug 'tpope/vim-fugitive'
 
