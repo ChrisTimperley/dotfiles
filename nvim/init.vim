@@ -80,3 +80,13 @@ let g:ycm_filetype_blacklist = {
       \}
 
 call plug#end()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" COLOURS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" switch between colour schemes for different file types
+" assumes that there is only one filetype per window
+" gruvbox, monokai, dracula, zenburn
+colorscheme tender
+autocmd BufEnter,BufNewFile *.rs colorscheme gruvbox
+autocmd BufLeave *.rs colorscheme tender
