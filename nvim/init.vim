@@ -63,6 +63,7 @@ Plug 'preservim/nerdtree'
 
 " asynchronous linting and build automation
 Plug 'neomake/neomake'
+:map <CTRL><> :echo 'Cool' <CR>
 
 " support for Rust
 Plug 'rust-lang/rust.vim'
@@ -74,6 +75,5 @@ let g:ycm_filetype_blacklist = {
       \ 'tex': 1,
       \ 'latex': 1
       \}
-highlight YcmWarningLine guibg=#fca103
 
 call plug#end()
