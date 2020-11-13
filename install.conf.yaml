@@ -21,6 +21,9 @@
     ~/.Xdefaults: xorg/Xdefaults
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
+    ~/.config/compton.conf:
+      path: compton/compton.conf
+      create: true
     ~/.config/nvim/init.vim:
       path: nvim/init.vim
       create: true
