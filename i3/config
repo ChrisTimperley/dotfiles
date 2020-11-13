@@ -207,6 +207,9 @@ bar {
 exec --no-startup-id dunst &
 exec --no-startup-id exec "start-pulseaudio-x11"
 
+# compton
+exec --no-startup-id compton --config "${HOME}/.config/compton.conf" -b
+
 # transparency
 exec xcompmgr -c -f -n
 
