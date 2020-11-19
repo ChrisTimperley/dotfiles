@@ -12,6 +12,13 @@ set shellslash
 " netrw: tree style
 let g:netrw_liststyle=3
 
+" disable TeX indentation
+" https://www.reddit.com/r/neovim/comments/991kmv/annoying_auto_indentation_in_tex_files
+setlocal autoindent
+let g:tex_indent_items=0
+let g:tex_indent_and=0
+let g:tex_indent_brace=0
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BINDINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -64,6 +71,9 @@ Plug 'machakann/vim-highlightedyank'
 " pretty tree explorer
 Plug 'preservim/nerdtree'
 
+" TOML highlighting
+Plug 'cespare/vim-toml'
+
 " asynchronous linting and build automation
 Plug 'neomake/neomake'
 :map <CTRL><> :echo 'Cool' <CR>
@@ -76,7 +86,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --clang-completer' }
 let g:ycm_global_ycm_extra_conf = '~/.config/nvim/.ycm_extra_conf.py'
 let g:ycm_filetype_blacklist = {
       \ 'tex': 1,
-      \ 'latex': 1
+      \ 'latex': 1,
       \ 'rst': 1
       \}
 
