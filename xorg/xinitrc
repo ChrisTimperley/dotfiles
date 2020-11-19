@@ -15,5 +15,10 @@ xset s noblank
 # disable the built-in monitor if plugged into my monitor
 xrandr -q | grep "^DP-1 connected" && xrandr --output eDP-1 --disable
 
+# enable 144Hz on monitor
+. xinitrc.local
+xrandr -q | grep "USB-C-0 connected 2560x1440" \
+  && xrandr --output USB-C-0 --mode 2560x1440 --rate 144.00
+
 # autocutsel &
 exec i3
