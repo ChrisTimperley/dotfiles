@@ -11,6 +11,7 @@ alias oldvim="\vim"
 
 [[ -f "${HOME}/.bash_functions" ]] && source "${HOME}/.bash_functions"
 [[ -f "${HOME}/.bash_aliases" ]] && source "${HOME}/.bash_aliases"
+[[ -f "${HOME}/.bashrc.local" ]] && source "${HOME}/.bashrc.local"
 
 export PATH="${HOME}/.dynamic-colors/bin:${PATH}"
 
@@ -20,6 +21,10 @@ fi
 
 if [ -d "${HOME}/.gem/ruby/2.6.0/bin" ]; then
   export PATH="${HOME}/.gem/ruby/2.6.0/bin:${PATH}"
+fi
+
+if [ -d "${HOME}/.poetry/bin" ]; then
+  export PATH="${HOME}/.poetry/bin:${PATH}"
 fi
 
 # initialise opam
@@ -39,3 +44,4 @@ fi
 
 export SDKMAN_DIR="/${HOME}/.sdkman"
 [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
+
