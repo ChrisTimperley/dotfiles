@@ -1,9 +1,9 @@
-[submodule "fonts/powerline"]
-  path = fonts/powerline
-  url = git://github.com/powerline/fonts
 [submodule "dotbot"]
   path = dotbot
   url = https://github.com/anishathalye/dotbot
 [submodule "zsh/antigen"]
   path = zsh/antigen
   url = https://github.com/zsh-users/antigen
+[submodule "fonts/powerline"]
+	path = fonts/powerline
+	url = git@github.com:powerline/fonts
