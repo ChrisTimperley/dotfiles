@@ -65,9 +65,6 @@
       path: polybar/config
 
 # terminator
-- shell:
-    - ["which terminator || sudo apt install -y terminator", "Installing terminator"]
-    - ["mkdir -p ~/.config/terminator", "Setup terminator"]
 - link:
     ~/.config/terminator/config:
       path: terminator/config
