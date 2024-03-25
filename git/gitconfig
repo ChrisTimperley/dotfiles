@@ -8,3 +8,7 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+[alias]
+  logdog = log --decorate --oneline --graph --all
+[rebase]
+  updateRefs = true
