@@ -5,6 +5,9 @@
 - clean: ['~']
 
 - link:
+    ~/.yt-dlp/config:
+      path: youtube-dl/config
+      create: true
     ~/.dynamic-colors: dynamic-colors
     ~/.tmux.conf: tmux/tmux.conf
     ~/.gitconfig: git/gitconfig

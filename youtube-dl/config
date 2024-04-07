@@ -1,3 +1,12 @@
 --add-metadata
 --continue
 --external-downloader aria2c
+--audio-quality 0
+--concurrent-fragments 4
+--embed-thumbnail
+--embed-subs
+--embed-metadata
+--embed-chapters
+--remux-video mp4
+
+-o ~/YouTube/%(channel)s/%(title)s.%(ext)s
