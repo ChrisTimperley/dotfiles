@@ -12,3 +12,9 @@
   logdog = log --decorate --oneline --graph --all
 [rebase]
   updateRefs = true
+[credential "https://github.com"]
+  helper = 
+  helper = !/run/current-system/sw/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+  helper = 
+  helper = !/run/current-system/sw/bin/gh auth git-credential
