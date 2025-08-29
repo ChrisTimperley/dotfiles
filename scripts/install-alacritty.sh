@@ -4,6 +4,5 @@ set -euo pipefail
 source "$(dirname "$0")/.common.sh"
 
 if is_macos && has brew; then
-  brew install --cask font-hack-nerd-font || true
-  exit 0
+  brew install --cask alacritty || true
 fi
