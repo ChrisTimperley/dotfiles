@@ -35,6 +35,9 @@
 # https://www.macworld.com/article/351347/how-to-activate-key-repetition-through-the-macos-terminal.html
 
 - shell:
+  - ["git submodule update --init --recursive", "Initialize git submodules"]
+
+- shell:
   - ["./scripts/install-nerd-fonts.sh JetBrainsMono", "Install Nerd Font"]
 
 - shell:
