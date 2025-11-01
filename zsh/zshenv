@@ -1,2 +1,7 @@
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export PATH="$HOME/.local/bin:/usr/bin:$PATH"
+
+# macOS only: add VS Code if installed at the default location
+if [[ "$OSTYPE" == darwin* && -d "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ]]; then
+  export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+fi
