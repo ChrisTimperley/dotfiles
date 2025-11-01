@@ -1,37 +1,27 @@
-export EDITOR='vim'
+setopt prompt_subst interactivecomments extendedglob
+HISTFILE=${XDG_STATE_HOME:-$HOME/.local/state}/zsh/history
+HISTSIZE=200000
+SAVEHIST=$HISTSIZE
+setopt hist_ignore_all_dups hist_reduce_blanks inc_append_history
 
-# =============================================================================
-# Import bash functions and aliases
-# =============================================================================
-source ~/.bash_functions
-source ~/.bash_aliases
+autoload -Uz compinit && compinit -C
 
-# =============================================================================
-# Aliases
-# =============================================================================
+# --- zgenom bootstrap ---
+ZGENOM_HOME=${XDG_DATA_HOME:-$HOME/.local/share}/zgenom
+source "$ZGENOM_HOME/zgenom.zsh"
 
-# TODO: split into separate file, share with bash?
-alias ls='ls --color=auto'
+zgenom autoupdate
 
-# Add /usr/bin to PATH
-export PATH="$PATH:/usr/bin"
+# plugins
+zgenom load zdharma-continuum/fast-syntax-highlighting
+zgenom load zsh-users/zsh-autosuggestions
+zgenom load marlonrichert/zsh-autocomplete   # or Aloxaf/fzf-tab if you prefer fzf
+zgenom load agkozak/zsh-z                    # or zoxide (see below)
 
-# dynamic-colors
-# https://github.com/sos4nt/dynamic-colors
-export PATH="${HOME}/.dynamic-colors/bin:${PATH}"
-[[ -d "${HOME}/.dynamic-colors" ]] && \
-  source "$HOME/.dynamic-colors/completions/dynamic-colors.zsh"
+# Prompt (choose ONE)
+# zgenom load romkatv/powerlevel10k
+# OR:
+command -v starship >/dev/null && eval "$(starship init zsh)"
 
-
-# =============================================================================
-# antigen
-# =============================================================================
-source ~/.dotfiles/zsh/antigen/antigen.zsh
-
-POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
-
-DEFAULT_USER=${USER}
-
-antigen theme bhilburn/powerlevel9k powerlevel9k
-antigen apply
+# Save cached init on first run
+zgenom save

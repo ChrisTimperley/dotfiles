@@ -1,8 +1,15 @@
 - defaults:
     link:
+      create: true
       relink: true
 
 - clean: ['~']
+
+# zsh
+- link:
+    ~/.zshenv: zsh/zshenv
+    ~/.config/zsh/.zprofile: zsh/zprofile
+    ~/.config/zsh/.zshrc: zsh/zshrc
 
 - link:
     ~/.dynamic-colors: dynamic-colors
@@ -25,16 +32,10 @@
       path: nvim/init.vim
       create: true
 
-- shell:
-    - ["git submodule update --init --recursive dynamic-colors", "Installing dynamic colors"]
+# https://www.macworld.com/article/351347/how-to-activate-key-repetition-through-the-macos-terminal.html
 
-# zsh
-- link:
-    ~/.zshrc: zsh/zshrc
 - shell:
-    - ["git submodule update --init --recursive zsh/antigen", "Installing antigen"]
+  - ["./scripts/install-nerd-fonts.sh JetBrainsMono", "Install Nerd Font"]
 
-# powerline fonts
-# - shell:
-#    - ["git submodule update --init --recursive fonts/powerline", "Preparing powerline fonts"]
-#    - ["(cd fonts/powerline && ./install.sh)", "Installing powerline fonts"]
+- shell:
+  - ['test -d "${XDG_DATA_HOME:-$HOME/.local/share}/zgenom" || git clone https://github.com/jandamm/zgenom.git "${XDG_DATA_HOME:-$HOME/.local/share}/zgenom"', "Install zgenom"]

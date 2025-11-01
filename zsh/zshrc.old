@@ -1,0 +1,33 @@
+export EDITOR='vim'
+
+# =============================================================================
+# Import bash functions and aliases
+# =============================================================================
+source ~/.bash_functions
+source ~/.bash_aliases
+
+# =============================================================================
+# Aliases
+# =============================================================================
+
+# TODO: split into separate file, share with bash?
+alias ls='ls --color=auto'
+
+# # dynamic-colors
+# # https://github.com/sos4nt/dynamic-colors
+# export PATH="${HOME}/.dynamic-colors/bin:${PATH}"
+# [[ -d "${HOME}/.dynamic-colors" ]] && \
+#   source "$HOME/.dynamic-colors/completions/dynamic-colors.zsh"
+
+# =============================================================================
+# antigen
+# =============================================================================
+source ~/.dotfiles/zsh/antigen/antigen.zsh
+
+POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
+
+DEFAULT_USER=${USER}
+
+antigen theme bhilburn/powerlevel9k powerlevel9k
+antigen apply
