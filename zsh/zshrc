@@ -25,3 +25,11 @@ command -v starship >/dev/null && eval "$(starship init zsh)"
 
 # Save cached init on first run
 zgenom save
+
+# --- Local, untracked overrides (if present) ---
+# Prefer $ZDOTDIR if you use it; fall back to $HOME.
+if [[ -n ${ZDOTDIR:-} && -r "$ZDOTDIR/.zshrc.local" ]]; then
+  source "$ZDOTDIR/.zshrc.local"
+elif [[ -r "$HOME/.zshrc.local" ]]; then
+  source "$HOME/.zshrc.local"
+fi
